@@ -1,8 +1,13 @@
+provider "aws" {
+  region = "us-east-1"
+  profile = "kkatsu"
+}
+
 module "s3_bucket" {
   source = "terraform-aws-modules/s3-bucket/aws"
 
-  bucket = var.bucket
-  acl    = var.acl
+  bucket = "my-s3-bucket"
+  acl    = "private"
 
   versioning = {
     enabled = true

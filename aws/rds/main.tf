@@ -1,3 +1,8 @@
+provider "aws" {
+  region = "us-east-1"
+  profile = "kkatsu"
+}
+
 module "db" {
   source  = "terraform-aws-modules/rds/aws"
 
